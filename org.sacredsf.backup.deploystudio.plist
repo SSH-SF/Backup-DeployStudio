@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>org.sacredsf.backup.deploystudio</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/rsync</string>
+		<string>avz</string>
+		<string>protocol=26</string>
+		<string>e &quot;ssh -p 8227 -i /Users/admin/.ssh/id_rsa -o StrictHostKeyChecking=no&quot;</string>
+		<string>/deploystudio</string>
+		<string>nmcspadden@10.1.10.10:~/existing_services/deploystudio</string>
+	</array>
+	<key>StandardErrorPath</key>
+	<string>/private/var/log/deploystudio_backup_err.log</string>
+	<key>StandardOutPath</key>
+	<string>/private/var/log/deploystudio_backup.log</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>1</integer>
+		<key>Minute</key>
+		<integer>45</integer>
+	</dict>
+</dict>
+</plist>
