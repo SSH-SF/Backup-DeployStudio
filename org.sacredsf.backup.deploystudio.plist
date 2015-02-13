@@ -6,12 +6,7 @@
 	<string>org.sacredsf.backup.deploystudio</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/bin/rsync</string>
-		<string>avz</string>
-		<string>protocol=26</string>
-		<string>e &quot;ssh -p 8227 -i /Users/admin/.ssh/id_rsa -o StrictHostKeyChecking=no&quot;</string>
-		<string>/deploystudio</string>
-		<string>nmcspadden@10.1.10.10:~/existing_services/deploystudio</string>
+		<string>/usr/local/backup_deploystudio.sh</string>
 	</array>
 	<key>StandardErrorPath</key>
 	<string>/private/var/log/deploystudio_backup_err.log</string>
